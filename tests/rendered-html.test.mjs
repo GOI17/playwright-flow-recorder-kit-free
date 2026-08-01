@@ -1,33 +1,10 @@
 import assert from "node:assert/strict";
+import { access, readFile } from "node:fs/promises";
 import test from "node:test";
 
-async function render() {
-  const workerUrl = new URL("../dist/server/index.js", import.meta.url);
-  workerUrl.searchParams.set("test", `${process.pid}-${Date.now()}`);
-  const { default: worker } = await import(workerUrl.href);
+test("exports the Alfred Labs GitHub Pages landing", async () => {
+  const html = await readFile(new URL("../out/index.html", import.meta.url), "utf8");
 
-  return worker.fetch(
-    new Request("http://localhost/", {
-      headers: { accept: "text/html" },
-    }),
-    {
-      ASSETS: {
-        fetch: async () => new Response("Not found", { status: 404 }),
-      },
-    },
-    {
-      waitUntil() {},
-      passThroughOnException() {},
-    },
-  );
-}
-
-test("server-renders the Alfred Labs sales landing", async () => {
-  const response = await render();
-  assert.equal(response.status, 200);
-  assert.match(response.headers.get("content-type") ?? "", /^text\/html\b/i);
-
-  const html = await response.text();
   assert.match(html, /<title>Playwright Flow Recorder Kit \| Alfred Labs<\/title>/i);
   assert.match(html, /Record the journey/);
   assert.match(html, /Hand off the evidence/);
@@ -37,5 +14,10 @@ test("server-renders the Alfred Labs sales landing", async () => {
   assert.match(html, /<sup>\$<\/sup>49/);
   assert.match(html, /<sup>\$<\/sup>199/);
   assert.match(html, /alfredlabs\.help@gmail\.com/);
+  assert.match(html, /playwright-flow-recorder-kit-free\/og\.png/);
   assert.doesNotMatch(html, /codex-preview|Your site is taking shape/);
+
+  await access(new URL("../out/og.png", import.meta.url));
+  await access(new URL("../out/404.html", import.meta.url));
+  await access(new URL("../out/.nojekyll", import.meta.url));
 });
