@@ -1,5 +1,0 @@
-1:"$Sreact.fragment"
-2:I[10548,["/playwright-flow-recorder-kit-free/_next/static/chunks/08gd8fl7yorv7.js"],"default"]
-3:I[62152,["/playwright-flow-recorder-kit-free/_next/static/chunks/08gd8fl7yorv7.js"],"default"]
-4:[]
-0:{"rsc":["$","$1","c",{"children":[null,["$","$L2",null,{"parallelRouterKey":"children","template":["$","$L3",null,{}]}]]}],"isPartial":false,"staleTime":300,"varyParams":"$W4","buildId":"cxIYU40cVmfqsd4n-rzhS"}
