@@ -1,22 +1,23 @@
-# Playwright Flow Recorder Kit — public landing
+# Playwright Flow Recorder Kit — public information
 
-Public Alfred Labs landing and early-access page for Playwright Flow Recorder
-Kit. The paid product source remains in the private
-`GOI17/playwright-flow-recorder-kit` repository.
+Public information for the Alfred Labs Playwright Flow Recorder Kit, a
+local-first Chrome workflow for product managers and QA professionals to record
+browser journeys, add expected results, replay them, and export reproducible
+evidence.
 
-## Local development
+Product details, pricing, Terms, Privacy, and Refund Policy:
 
-```bash
-npm ci
-npm run dev
-```
+https://goi17.github.io/playwright-flow-recorder-kit-free/
 
-## Validate the static GitHub Pages export
+## Repository separation
 
-```bash
-npm test
-```
+This public `main` branch contains documentation only. Product source, Chrome
+extension source, packaging materials, and landing-page source are maintained
+in the private product repository. The compiled public website is published to
+this repository's `gh-pages` branch.
 
-The static site is generated under `out/` and published to the `gh-pages`
-branch. No paid product source or downloadable Pro artifact belongs in this
-public repository.
+No paid-product source or downloadable Pro archive belongs on `main`.
+
+## Contact
+
+Product and security questions: `alfredlabs.help@gmail.com`.

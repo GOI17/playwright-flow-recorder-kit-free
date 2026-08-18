@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://goi17.github.io/playwright-flow-recorder-kit-free/sitemap.xml
