@@ -1,2 +1,2 @@
 :HL["/playwright-flow-recorder-kit-free/_next/static/chunks/31wtwyv23y_ag.css","style"]
-0:{"tree":{"name":"","param":null,"prefetchHints":4176,"slots":{"children":{"name":"refund-policy","param":null,"prefetchHints":4192,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":4256,"slots":null}}}}},"staleTime":300,"buildId":"9_NZIVFhxhqvhQxyzX_kx"}
+0:{"tree":{"name":"","param":null,"prefetchHints":4176,"slots":{"children":{"name":"refund-policy","param":null,"prefetchHints":4192,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":4256,"slots":null}}}}},"staleTime":300,"buildId":"zO85PeQHOF1lXTtS4SmuM"}
