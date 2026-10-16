@@ -1,4 +1,3 @@
 User-agent: *
 Allow: /
-
-Sitemap: https://pfrk.alfredlabs.org/sitemap.xml
+Sitemap: https://flowrecorder.alfredlabs.org/sitemap.xml
